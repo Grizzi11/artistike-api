@@ -37,14 +37,17 @@ app.use("/auth", authRouter);
 
 // Mongo + start
 const PORT = process.env.PORT || 8080;
-const MONGODB_URI = process.env.MONGODB_URI!;
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/artistike';
+
 mongoose.connect(MONGODB_URI)
   .then(() => {
-    app.listen(PORT, () => console.log(`API running on :${PORT}`));
+    console.log('✅ Connected to MongoDB');
+    app.listen(PORT, () => console.log(`🚀 API running on port ${PORT}`));
   })
   .catch(err => {
-    console.error("Mongo connection error:", err);
-    process.exit(1);
+    console.error("⚠️  MongoDB connection failed:", err.message);
+    console.log("ℹ️  Starting server without database for testing...");
+    app.listen(PORT, () => console.log(`🚀 API running on port ${PORT} (no DB)`));
   });
 
 export default app;
