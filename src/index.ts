@@ -27,6 +27,15 @@ app.use(helmet());
 app.use(morgan("tiny"));
 app.use(express.json());
 
+// Root endpoint
+app.get("/", (_req, res) => {
+  res.status(200).json({ 
+    message: "Artistike API is running!", 
+    version: "1.0.0",
+    endpoints: ["/health", "/auth/register", "/auth/login", "/auth/me"]
+  });
+});
+
 // Health
 app.get("/health", (_req, res) => {
   res.status(200).json({ ok: true, service: "artistike-api", ts: Date.now() });
