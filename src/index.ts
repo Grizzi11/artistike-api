@@ -30,9 +30,10 @@ app.use(express.json());
 // Root endpoint
 app.get("/", (_req, res) => {
   res.status(200).json({ 
-    message: "Artistike API is running!", 
-    version: "1.0.0",
-    endpoints: ["/health", "/auth/register", "/auth/login", "/auth/me"]
+    message: "Artistike API is running! [FULL VERSION WITH AUTH]", 
+    version: "2.0.0",
+    endpoints: ["/health", "/auth/register", "/auth/login", "/auth/me"],
+    timestamp: new Date().toISOString()
   });
 });
 
