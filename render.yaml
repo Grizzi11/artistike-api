@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: artistike-api
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        value: mongodb+srv://grizzi11:Kfej6PcTpYaQy4zp@cluster0.c5iup.mongodb.net/artistike?retryWrites=true&w=majority
+      - key: JWT_SECRET
+        value: artistike_jwt_secret_2024_production_key
+      - key: PORT
+        generateValue: true

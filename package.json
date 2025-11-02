@@ -1,36 +1,68 @@
-﻿{{
+﻿{{{
 
-  "name": "artistike-api",  "name": "artistike-api",
+  "name": "artistike-api",
 
-  "version": "2.0.0",  "version": "1.0.0", 
+  "version": "2.0.0",  "name": "artistike-api",  "name": "artistike-api",
 
-  "main": "dist/index.js",  "main": "dist/index.js",
+  "description": "Backend API for Artistike platform",
 
-  "scripts": {  "scripts": {
+  "main": "dist/index.js",  "version": "2.0.0",  "version": "1.0.0", 
 
-    "dev": "nodemon --watch src --exec ts-node src/index.ts",    "dev": "nodemon --watch src --exec ts-node src/index.ts",
+  "scripts": {
 
-    "build": "tsc",    "build": "tsc",
+    "build": "tsc",  "main": "dist/index.js",  "main": "dist/index.js",
 
-    "start": "node dist/index.js"    "start": "node dist/index.js"
+    "start": "node dist/index.js",
 
-  },  },
+    "dev": "tsx src/index.ts",  "scripts": {  "scripts": {
 
-  "dependencies": {  "dependencies": {
+    "clean": "rimraf dist"
 
-    "bcryptjs": "^3.0.2",    "bcryptjs": "^3.0.2",
+  },    "dev": "nodemon --watch src --exec ts-node src/index.ts",    "dev": "nodemon --watch src --exec ts-node src/index.ts",
 
-    "cors": "^2.8.5",    "cors": "^2.8.5", 
+  "dependencies": {
 
-    "dotenv": "^17.2.3",    "dotenv": "^17.2.3",
+    "express": "^5.1.1",    "build": "tsc",    "build": "tsc",
 
-    "express": "^5.1.0",    "express": "^5.1.0",
+    "mongoose": "^8.19.0",
 
-    "helmet": "^8.1.0",    "helmet": "^8.1.0",
+    "bcryptjs": "^2.4.3",    "start": "node dist/index.js"    "start": "node dist/index.js"
 
-    "jsonwebtoken": "^9.0.2",    "jsonwebtoken": "^9.0.2",
+    "jsonwebtoken": "^9.0.2",
 
-    "mongoose": "^8.19.2",    "mongoose": "^8.19.2",
+    "cors": "^2.8.5",  },  },
+
+    "dotenv": "^16.4.5"
+
+  },  "dependencies": {  "dependencies": {
+
+  "devDependencies": {
+
+    "@types/node": "^20.0.0",    "bcryptjs": "^3.0.2",    "bcryptjs": "^3.0.2",
+
+    "@types/express": "^5.0.0",
+
+    "@types/bcryptjs": "^2.4.6",    "cors": "^2.8.5",    "cors": "^2.8.5", 
+
+    "@types/jsonwebtoken": "^9.0.7",
+
+    "@types/cors": "^2.8.17",    "dotenv": "^17.2.3",    "dotenv": "^17.2.3",
+
+    "typescript": "^5.0.0",
+
+    "tsx": "^4.19.2",    "express": "^5.1.0",    "express": "^5.1.0",
+
+    "rimraf": "^6.0.1"
+
+  },    "helmet": "^8.1.0",    "helmet": "^8.1.0",
+
+  "engines": {
+
+    "node": ">=18.0.0"    "jsonwebtoken": "^9.0.2",    "jsonwebtoken": "^9.0.2",
+
+  }
+
+}    "mongoose": "^8.19.2",    "mongoose": "^8.19.2",
 
     "morgan": "^1.10.1"    "morgan": "^1.10.1"
 
