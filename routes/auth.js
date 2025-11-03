@@ -9,13 +9,16 @@ const router = express.Router();
 // @access  Public
 router.post('/register', async (req, res) => {
     try {
-        const { name, email, password, accountType } = req.body;
+        const { name, username, email, password, accountType } = req.body;
+
+        // Usar name o username (para compatibilidad)
+        const userName = name || username;
 
         // Validar campos requeridos
-        if (!name || !email || !password) {
+        if (!userName || !email || !password) {
             return res.status(400).json({
                 success: false,
-                message: 'Por favor complete todos los campos'
+                message: 'Por favor complete todos los campos (name/username, email, password)'
             });
         }
 
@@ -30,7 +33,7 @@ router.post('/register', async (req, res) => {
 
         // Crear usuario
         const user = await User.create({
-            name,
+            name: userName,
             email,
             password,
             accountType: accountType || 'fan'
