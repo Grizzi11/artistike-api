@@ -28,7 +28,7 @@ app.use(morgan("tiny"));
 app.use(express.json());
 
 // Root endpoint
-app.get("/", (_req, res) => {
+app.get("/mongodb://localhost:27017/artistike", (_req, res) => {
   res.status(200).json({ 
     message: "Artistike API is running! [FULL VERSION WITH AUTH]", 
     version: "2.0.0",

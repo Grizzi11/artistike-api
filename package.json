@@ -1,93 +1,30 @@
-﻿{{{
-
+﻿{
   "name": "artistike-api",
-
-  "version": "2.0.0",  "name": "artistike-api",  "name": "artistike-api",
-
-  "description": "Backend API for Artistike platform",
-
-  "main": "dist/index.js",  "version": "2.0.0",  "version": "1.0.0", 
-
+  "version": "1.0.0",
+  "description": "Backend authentication API for the Artistike platform",
+  "main": "server.js",
   "scripts": {
-
-    "build": "tsc",  "main": "dist/index.js",  "main": "dist/index.js",
-
-    "start": "node dist/index.js",
-
-    "dev": "tsx src/index.ts",  "scripts": {  "scripts": {
-
-    "clean": "rimraf dist"
-
-  },    "dev": "nodemon --watch src --exec ts-node src/index.ts",    "dev": "nodemon --watch src --exec ts-node src/index.ts",
-
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build": "echo Build complete"
+  },
   "dependencies": {
-
-    "express": "^5.1.1",    "build": "tsc",    "build": "tsc",
-
-    "mongoose": "^8.19.0",
-
-    "bcryptjs": "^2.4.3",    "start": "node dist/index.js"    "start": "node dist/index.js"
-
+    "express": "^4.18.2",
+    "mongoose": "^8.0.0",
+    "bcryptjs": "^2.4.3",
     "jsonwebtoken": "^9.0.2",
-
-    "cors": "^2.8.5",  },  },
-
-    "dotenv": "^16.4.5"
-
-  },  "dependencies": {  "dependencies": {
-
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "cookie-parser": "^1.4.6",
+    "helmet": "^7.1.0"
+  },
   "devDependencies": {
-
-    "@types/node": "^20.0.0",    "bcryptjs": "^3.0.2",    "bcryptjs": "^3.0.2",
-
-    "@types/express": "^5.0.0",
-
-    "@types/bcryptjs": "^2.4.6",    "cors": "^2.8.5",    "cors": "^2.8.5", 
-
-    "@types/jsonwebtoken": "^9.0.7",
-
-    "@types/cors": "^2.8.17",    "dotenv": "^17.2.3",    "dotenv": "^17.2.3",
-
-    "typescript": "^5.0.0",
-
-    "tsx": "^4.19.2",    "express": "^5.1.0",    "express": "^5.1.0",
-
-    "rimraf": "^6.0.1"
-
-  },    "helmet": "^8.1.0",    "helmet": "^8.1.0",
-
+    "nodemon": "^3.0.0"
+  },
   "engines": {
-
-    "node": ">=18.0.0"    "jsonwebtoken": "^9.0.2",    "jsonwebtoken": "^9.0.2",
-
-  }
-
-}    "mongoose": "^8.19.2",    "mongoose": "^8.19.2",
-
-    "morgan": "^1.10.1"    "morgan": "^1.10.1"
-
-  },  },
-
-  "devDependencies": {  "devDependencies": {
-
-    "@types/bcryptjs": "^2.4.6",    "@types/bcryptjs": "^2.4.6",
-
-    "@types/cors": "^2.8.19",    "@types/cors": "^2.8.19", 
-
-    "@types/express": "^5.0.5",    "@types/express": "^5.0.5",
-
-    "@types/jsonwebtoken": "^9.0.10",    "@types/jsonwebtoken": "^9.0.10",
-
-    "@types/morgan": "^1.9.10",    "@types/morgan": "^1.9.10",
-
-    "@types/node": "^24.9.2",    "@types/node": "^24.9.2",
-
-    "nodemon": "^3.1.10",    "nodemon": "^3.1.10",
-
-    "ts-node": "^10.9.2",    "ts-node": "^10.9.2", 
-
-    "typescript": "^5.9.3"    "typescript": "^5.9.3"
-
-  }  }
-
-}}
+    "node": ">=18.0.0"
+  },
+  "keywords": ["api", "authentication", "express", "mongodb", "jwt"],
+  "author": "Artistike Team",
+  "license": "MIT"
+}
