@@ -31,7 +31,9 @@ app.get("/health", (_req, res) => res.status(200).send("ok"));
 app.get('/', (req, res) => {
     res.json({
         message: 'Artistike API funcionando!',
-        version: '2.0.0',
+        version: '2.0.1',
+        status: 'active',
+        timestamp: new Date().toISOString(),
         endpoints: [
             'GET /health',
             'POST /api/auth/register',
